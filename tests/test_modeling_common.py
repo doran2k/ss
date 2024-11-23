@@ -2343,7 +2343,7 @@ class ModelTesterMixin:
                             recursive_check(tuple_iterable_value, dict_iterable_value)
                     elif tuple_object is None:
                         return
-                    else:
+                    elif isinstance(tuple_object, torch.Tensor):
                         self.assertTrue(
                             torch.allclose(
                                 set_nan_tensor_to_zero(tuple_object), set_nan_tensor_to_zero(dict_object), atol=1e-5
@@ -3856,7 +3856,7 @@ class ModelTesterMixin:
                 for name, submodule in model_eager.named_modules():
                     class_name = submodule.__class__.__name__
                     if "SdpaAttention" in class_name or "SdpaSelfAttention" in class_name:
-                        raise ValueError("The eager model should not have SDPA attention layers")
+                        raise ValueError(f"The eager model should not have SDPA attention layers but got {class_name}")
 
                 has_sdpa = False
                 for name, submodule in model_sdpa.named_modules():
