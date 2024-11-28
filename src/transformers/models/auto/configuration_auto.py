@@ -551,7 +551,7 @@ MODEL_NAMES_MAPPING = OrderedDict(
         ("recurrent_gemma", "RecurrentGemma"),
         ("reformer", "Reformer"),
         ("regnet", "RegNet"),
-        ("relation_detr", "Relation DETR"),
+        ("relation_detr", "RelationDETR"),
         ("rembert", "RemBERT"),
         ("resnet", "ResNet"),
         ("retribert", "RetriBERT"),
