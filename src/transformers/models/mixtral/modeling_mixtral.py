@@ -1609,3 +1609,13 @@ class MixtralForQuestionAnswering(MixtralPreTrainedModel):
             hidden_states=outputs.hidden_states,
             attentions=outputs.attentions,
         )
+
+
+__all__ = [
+    "MixtralForCausalLM",
+    "MixtralForQuestionAnswering",
+    "MixtralModel",
+    "MixtralPreTrainedModel",
+    "MixtralForSequenceClassification",
+    "MixtralForTokenClassification",
+]

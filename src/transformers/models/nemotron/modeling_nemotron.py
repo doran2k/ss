@@ -1390,3 +1390,13 @@ class NemotronForTokenClassification(NemotronPreTrainedModel):
             hidden_states=outputs.hidden_states,
             attentions=outputs.attentions,
         )
+
+
+__all__ = [
+    "NemotronForQuestionAnswering",
+    "NemotronForCausalLM",
+    "NemotronModel",
+    "NemotronPreTrainedModel",
+    "NemotronForSequenceClassification",
+    "NemotronForTokenClassification",
+]

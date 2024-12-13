@@ -1616,3 +1616,13 @@ class FalconForQuestionAnswering(FalconPreTrainedModel):
             hidden_states=outputs.hidden_states,
             attentions=outputs.attentions,
         )
+
+
+__all__ = [
+    "FalconForCausalLM",
+    "FalconModel",
+    "FalconPreTrainedModel",
+    "FalconForSequenceClassification",
+    "FalconForTokenClassification",
+    "FalconForQuestionAnswering",
+]

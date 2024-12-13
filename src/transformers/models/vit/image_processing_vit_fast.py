@@ -297,3 +297,6 @@ class ViTImageProcessorFast(BaseImageProcessorFast):
 
         data = {"pixel_values": torch.stack(transformed_images, dim=0)}
         return BatchFeature(data, tensor_type=return_tensors)
+
+
+__all__ = ["ViTImageProcessorFast"]
