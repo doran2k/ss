@@ -165,6 +165,7 @@ from . import (
     mobilenet_v2,
     mobilevit,
     mobilevitv2,
+    modernbert,
     moshi,
     mpnet,
     mpt,
