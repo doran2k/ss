@@ -122,6 +122,12 @@ else:
         "AutoModelForZeroShotObjectDetection",
         "AutoModelForImageTextToText",
     ]
+    _import_structure["modeling_task"] = [
+        "AutoForCausalLM",
+        "AutoForSequenceClassification",
+        "AutoForQuestionAnswering",
+        "AutoForTokenClassification",
+    ]
 
 try:
     if not is_tf_available():
@@ -310,6 +316,12 @@ if TYPE_CHECKING:
             AutoModelForZeroShotImageClassification,
             AutoModelForZeroShotObjectDetection,
             AutoModelWithLMHead,
+        )
+        from .modeling_task import (
+            AutoForCausalLM,
+            AutoForQuestionAnswering,
+            AutoForSequenceClassification,
+            AutoForTokenClassification,
         )
 
     try:
