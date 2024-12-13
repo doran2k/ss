@@ -290,5 +290,6 @@ from . import (
     yolos,
     yoso,
     zamba,
+    zamba2,
     zoedepth,
 )
