@@ -781,6 +781,7 @@ _import_structure = {
         "TapasTokenizer",
     ],
     "models.time_series_transformer": ["TimeSeriesTransformerConfig"],
+    "models.timesfm": ["TimesFMConfig"],
     "models.timesformer": ["TimesformerConfig"],
     "models.timm_backbone": ["TimmBackboneConfig"],
     "models.timm_wrapper": ["TimmWrapperConfig"],
@@ -3539,6 +3540,13 @@ else:
             "TimeSeriesTransformerPreTrainedModel",
         ]
     )
+    _import_structure["models.timesfm"].extend(
+        [
+            "TimesFMDecoder",
+            "TimesFMModelForPrediction",
+            "TimesFMPreTrainedModel",
+        ]
+    )
     _import_structure["models.timesformer"].extend(
         [
             "TimesformerForVideoClassification",
@@ -5749,6 +5757,7 @@ if TYPE_CHECKING:
     from .models.time_series_transformer import (
         TimeSeriesTransformerConfig,
     )
+    from .models.timesfm import TimesFMConfig
     from .models.timesformer import (
         TimesformerConfig,
     )
@@ -8063,6 +8072,11 @@ if TYPE_CHECKING:
             TimeSeriesTransformerForPrediction,
             TimeSeriesTransformerModel,
             TimeSeriesTransformerPreTrainedModel,
+        )
+        from .models.timesfm import (
+            TimesFMDecoder,
+            TimesFMModelForPrediction,
+            TimesFMPreTrainedModel,
         )
         from .models.timesformer import (
             TimesformerForVideoClassification,
